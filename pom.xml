@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.eti.tiagosousa</groupId>
 	<artifactId>spring-thymeleaf-template</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<name>Spring Thymeleaf Template</name>
 
@@ -16,8 +16,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
+		
+		<!-- Java 8 -->
 		<java.version>1.8</java.version>
+		
+		<!-- Maven Compiler -->
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
+		
+		<!-- Servlet API -->
+		<servlet.version>3.1.0</servlet.version>
+		
+		<!-- Spring Core -->
+		<spring-core.version>5.0.2.RELEASE</spring-core.version>
 	</properties>
 
 	<build>
@@ -34,4 +44,39 @@
 
 		<finalName>springthymeleaf</finalName>
 	</build>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring-core.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<!-- Servlet API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	
+		<!-- Spring MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>	
 </project>
