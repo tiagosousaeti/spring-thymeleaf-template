@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.eti.tiagosousa</groupId>
 	<artifactId>spring-thymeleaf-template</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<packaging>war</packaging>
 	<name>Spring Thymeleaf Template</name>
 
@@ -37,7 +37,10 @@
 		<spring-core.version>5.0.2.RELEASE</spring-core.version>
 		
 		<!-- Thymeleaf -->
-		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>				
+		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+		
+		<!-- Thymeleaf Layout Dialect -->
+		<thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
 	</properties>
 
 	<build>
@@ -140,6 +143,13 @@
 			<artifactId>thymeleaf-spring5</artifactId>
 			<version>${thymeleaf.version}</version>
 			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Thymeleaf - Layout Dialect -->
+		<dependency>
+    		<groupId>nz.net.ultraq.thymeleaf</groupId>
+    		<artifactId>thymeleaf-layout-dialect</artifactId>
+    		<version>${thymeleaf-layout-dialect.version}</version>
 		</dependency>
 	</dependencies>	
 </project>
