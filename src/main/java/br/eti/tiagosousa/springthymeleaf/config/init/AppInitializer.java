@@ -2,6 +2,8 @@ package br.eti.tiagosousa.springthymeleaf.config.init;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import br.eti.tiagosousa.springthymeleaf.config.WebConfig;
+
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -11,11 +13,11 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return null;
+		return new Class<?>[] { WebConfig.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		return null;
+		return new String[] { "/" };
 	}
 }

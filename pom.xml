@@ -28,6 +28,9 @@
 		
 		<!-- Spring Core -->
 		<spring-core.version>5.0.2.RELEASE</spring-core.version>
+		
+		<!-- Thymeleaf -->
+		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
 	</properties>
 
 	<build>
@@ -77,6 +80,20 @@
 					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		
+		<!-- Thymeleaf -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>${thymeleaf.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+			<version>${thymeleaf.version}</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>	
 </project>
