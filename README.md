@@ -15,7 +15,10 @@ Requer o Maven configurado na sua máquina. No terminal, use:
 mvn jetty:run
 
 Acesse:
-http://localhost:8080/template-spring-jsf/
+http://localhost:8080/
+
+Página home:
+![Home](https://tiagosousa.eti.br/img/springthymeleaf.png)
 
 ## Dependências
 - Java 8
@@ -31,7 +34,7 @@ http://localhost:8080/template-spring-jsf/
 - Bootstrap 4
 
 ## Versão
-1.0.5
+1.0.6
 
 ## Redes Sociais
 [![Twitter Follow](https://img.shields.io/twitter/follow/tiaguins.svg?style=social)](https://twitter.com/tiaguins) 
